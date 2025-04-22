@@ -6,7 +6,7 @@ class CSubObject:
 	def __init__(self):
 		self.Entries = []
 
-	def CollectSubObjects(file: BinaryIO, count:int) -> dict:
+	def CollectSubObjects(self, file: BinaryIO, count:int) -> dict:
 		for i in range(count):
 
 
