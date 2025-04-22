@@ -1,0 +1,1 @@
+ADDEND = 8 # for POF0 alignment (it needs a 8-byte alignment)
