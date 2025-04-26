@@ -34,6 +34,7 @@
     <Compile Include="Import\Shared\VertexGroup\__init__.py" />
     <Compile Include="Import\Shared\__init__.py" />
     <Compile Include="Import\V1\Armature\__init__.py" />
+    <Compile Include="Import\V1\Mesh\Vertex.py" />
     <Compile Include="Import\V1\Mesh\__init__.py" />
     <Compile Include="Import\V1\SubObject\Table.py" />
     <Compile Include="Import\V1\SubObject\__init__.py" />
