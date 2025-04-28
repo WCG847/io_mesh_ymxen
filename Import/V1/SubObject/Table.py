@@ -11,17 +11,16 @@ class CSubObject:
     def CollectSubObjects(self, file: BinaryIO, count: int, ptr: int) -> dict:
         file.seek(ptr + ADDEND)
         for i in range(count):
-            for j in range(92):
-                VertexCount = unpack(">I", file.read(4))[0]
-                FaceCount = unpack(">I", file.read(4))[0]
-                BoneCount = unpack(">I", file.read(4))[0]
-                AllBoneIndices = []
-                for k in range(BoneCount):
-                    BoneIndices = unpack(">20I", file.read(80))
-                    ValidBoneIndices = [
-                        index for index in BoneIndices if index != 0xFFFFFFFF
-                    ]
-                    AllBoneIndices.append(ValidBoneIndices)
+            VertexCount = unpack(">I", file.read(4))[0]
+            FaceCount = unpack(">I", file.read(4))[0]
+            BoneCount = unpack(">I", file.read(4))[0]
+            AllBoneIndices = []
+            for k in range(BoneCount):
+                BoneIndices = unpack(">20I", file.read(80))
+                ValidBoneIndices = [
+                    index for index in BoneIndices if index != 0xFFFFFFFF
+                ]
+                AllBoneIndices.append(ValidBoneIndices)
                 BoneWeightCount = unpack(">I", file.read(4))[
                     0
                 ]  # typically rigid skinned

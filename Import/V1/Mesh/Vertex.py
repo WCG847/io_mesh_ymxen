@@ -26,7 +26,6 @@ class CSkinModelParser:
 
 			total_size = sizeof(CSkinModel) * VertexCount
 
-			# Read once
 			raw_data = file.read(total_size)
 
 			array_type = CSkinModel * VertexCount 
