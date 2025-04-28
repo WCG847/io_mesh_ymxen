@@ -44,7 +44,7 @@ class CSubObject:
                 FacePTR = unpack(">I", file.read(4))[0]
                 file.seek(4, 1)  # We can decode the top Vertex Count.
                 Centre = unpack(">3f", file.read(12))  # X, Y, Z center
-                Radius = unpack(">f", file.read(4))  # Radius
+                Radius = unpack(">f", file.read(4))
                 self.Entries.append(
                     {
                         "VertexCount": VertexCount,
